@@ -42,7 +42,7 @@ jobs:
 
       - name: Notify Slack on failure
         if: failure()  # This step runs only if previous steps fail
-        uses: Ilshidur/action-slack@v2
+        uses: Ilshidur/action-slack@v1
         with:
           args: |
             --channel '#your-channel'
