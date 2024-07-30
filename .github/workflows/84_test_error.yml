@@ -42,10 +42,10 @@ jobs:
 
       - name: Notify Slack on failure
         if: failure()  # This step runs only if previous steps fail
-        uses:  slackapi/slack-github-action@v1
+        uses:  Ilshidur/action-slack@2.0.2
         with:
           args: |
             --channel '#your-channel'
             --text 'The nightly build failed. Please check the build logs.'
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
